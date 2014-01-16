@@ -17,3 +17,4 @@ RUN pip install virtualenv
 RUN apt-get install -y python-dev
 RUN apt-get install -y vim
 RUN apt-get install -y net-tools        # ifconfig
+RUN apt-get install -y netcat           # nc
