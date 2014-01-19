@@ -6,15 +6,18 @@
 # use the ubuntu base image provided by dotCloud
 FROM ubuntu
 MAINTAINER Jabba Laci, jabba.laci@gmail.com
+
+RUN apt-get install -y netcat           # nc
+
 # make sure the package repository is up to date
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe multiverse" > /etc/apt/sources.list
 RUN apt-get update
 
-RUN apt-get install -y mc
 RUN apt-get install -y python-pip
 RUN pip install virtualenv
 #RUN apt-get install -y libpq-dev
 RUN apt-get install -y python-dev
+
+RUN apt-get install -y mc
 RUN apt-get install -y vim
 RUN apt-get install -y net-tools        # ifconfig
-RUN apt-get install -y netcat           # nc
